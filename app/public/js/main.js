@@ -47,16 +47,23 @@
 
 
     function createNewMessage(username, message) {
+
+
+
         var $li = $('<li class="message">');
         var $user = $('<span class="username">');
         var $message = $('<span class="messageBody">');
 
-        $user.html(username);
-        $message.html(message);
+        $user.html(clearString(username));
+        $message.html(clearString(message));
 
         $li.append($user,$message);
 
         return $li;
+    }
+
+    function clearString(str) {
+        return $('<div />').html(str).text();
     }
 
 })(jQuery)

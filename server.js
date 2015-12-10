@@ -19,7 +19,7 @@ app.set('views', __dirname + '/app/views');
 app.set('view cache', false);
 swig.setDefaults({ cache: false });
 
-var port = process.env.port || 80;
+var port = process.env.port || 8080;
 
 app.use('/', siteRouter);
 
